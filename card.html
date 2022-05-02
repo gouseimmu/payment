@@ -22,7 +22,7 @@
 <script>
 
     var form = document.querySelector("form").addEventListener("submit" , carddetails);
-    var details = JSON.parse(localStorage.getItem("userdata"))|| []
+    var details = JSON.parse(localStorage.getItem("userdata"));
     function carddetails(){
         event.preventDefault();
         var data = {
@@ -31,15 +31,15 @@
         date:document.querySelector("#expiry").value,
         name:document.querySelector("#name").value,
     }
-
-    if(data.card_number==""||data.CVV==""||data.date==""||data.name=="")
-    {
-        alert("enter card detaiils");
-    }
-    else if(data.card_number!=details.card_number && data.CVV!=details.CVV && data.date != details.date && data.name !=details.name)
+    if(data.card_number!=details.cardnumber && data.CVV!=details.CVV && data.date != details.date && data.name !=details.name)
     {
         alert("Please enter valid card details")
     }
+    else if(data.card_number==""||data.CVV==""||data.date==""||data.name=="")
+    {
+        alert("enter card detaiils");
+    }
+    
     else
     {
         alert("OTP is sent to mobile number")

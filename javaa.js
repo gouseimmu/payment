@@ -5,7 +5,7 @@ function myfun(){
     event.preventDefault();
     document.querySelector("form").value;
     var datastoring = {
-        card_number:document.querySelector("#cardnumber").value,
+        cardnumber:document.querySelector("#cardnumber").value,
         CVV:document.querySelector("#CVV").value,
         date:document.querySelector("#expiry").value,
         name:document.querySelector("#name").value,
